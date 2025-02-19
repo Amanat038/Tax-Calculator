@@ -30,12 +30,12 @@ const TaxForm = () => {
 
       
       try {
-         await axios.post("http://localhost:5001/api/taxData", {
+         await axios.post("https://tax-calculator-3qou.onrender.com", {
             userId,
             ...formData,
          });
 
-         const res = await axios.get("http://localhost:5001/api/taxResult", {
+         const res = await axios.get("https://tax-calculator-3qou.onrender.com", {
             params: { userId },
          });
 
